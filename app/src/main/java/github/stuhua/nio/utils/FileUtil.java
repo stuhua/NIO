@@ -200,6 +200,7 @@ public class FileUtil {
                 fo = new FileOutputStream(targetFile);
                 in = fi.getChannel();
                 out = fo.getChannel();
+
                 in.transferTo(0, in.size(), out);
             } catch (IOException e) {
                 e.printStackTrace();
