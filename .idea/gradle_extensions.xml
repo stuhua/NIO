@@ -97,6 +97,7 @@
             <task name="transformNativeLibsWithMergeJniLibsForDebug" type="com.android.build.gradle.internal.pipeline.TransformTask">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="assembleAndroidTest">Assembles all the Test applications.&lt;p&gt;&lt;i&gt;Task group: build&lt;i&gt;</task>
             <task name="processDebugAndroidTestResources" type="com.android.build.gradle.tasks.ProcessAndroidResources">&lt;i&gt;Task group: other&lt;i&gt;</task>
+            <task name="transformClassesWithDesugarForDebugAndroidTest" type="com.android.build.gradle.internal.pipeline.TransformTask">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="packageRelease" type="com.android.build.gradle.tasks.PackageApplication">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="validateSigningDebug" type="com.android.build.gradle.internal.tasks.ValidateSigningTask">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="compileDebugAidl" type="com.android.build.gradle.tasks.AidlCompile">&lt;i&gt;Task group: other&lt;i&gt;</task>
@@ -156,6 +157,7 @@
             <task name="compileDebugRenderscript" type="com.android.build.gradle.tasks.RenderscriptCompile">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="generateReleaseBuildConfig" type="com.android.build.gradle.tasks.GenerateBuildConfig">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="ideaModule" type="org.gradle.plugins.ide.idea.GenerateIdeaModule">Generates IDEA module files (IML)&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
+            <task name="transformClassesWithDesugarForRelease" type="com.android.build.gradle.internal.pipeline.TransformTask">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="cleanIdea">Cleans IDEA project files (IML, IPR)&lt;p&gt;&lt;i&gt;Task group: IDE&lt;i&gt;</task>
             <task name="generateReleaseResources">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="lintVitalRelease" type="com.android.build.gradle.tasks.Lint">Runs lint on just the fatal issues in the release build.&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
@@ -168,6 +170,7 @@
             <task name="clean" type="org.gradle.api.tasks.Delete">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="preDebugBuild" type="com.android.build.gradle.internal.tasks.AppPreBuildTask">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="generateDebugBuildConfig" type="com.android.build.gradle.tasks.GenerateBuildConfig">&lt;i&gt;Task group: other&lt;i&gt;</task>
+            <task name="transformClassesWithDesugarForDebug" type="com.android.build.gradle.internal.pipeline.TransformTask">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="build">Assembles and tests this project.&lt;p&gt;&lt;i&gt;Task group: build&lt;i&gt;</task>
             <task name="assembleRelease">Assembles all Release builds.&lt;p&gt;&lt;i&gt;Task group: build&lt;i&gt;</task>
             <task name="resolveConfigAttr" type="com.android.build.gradle.internal.TaskManager$ConfigAttrTask">&lt;i&gt;Task group: other&lt;i&gt;</task>
@@ -277,6 +280,7 @@
             <task name="transformNativeLibsWithMergeJniLibsForDebug" type="com.android.build.gradle.internal.pipeline.TransformTask">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="assembleAndroidTest">Assembles all the Test applications.&lt;p&gt;&lt;i&gt;Task group: build&lt;i&gt;</task>
             <task name="processDebugAndroidTestResources" type="com.android.build.gradle.tasks.ProcessAndroidResources">&lt;i&gt;Task group: other&lt;i&gt;</task>
+            <task name="transformClassesWithDesugarForDebugAndroidTest" type="com.android.build.gradle.internal.pipeline.TransformTask">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="packageRelease" type="com.android.build.gradle.tasks.PackageApplication">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="validateSigningDebug" type="com.android.build.gradle.internal.tasks.ValidateSigningTask">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="compileDebugAidl" type="com.android.build.gradle.tasks.AidlCompile">&lt;i&gt;Task group: other&lt;i&gt;</task>
@@ -334,6 +338,7 @@
             <task name="compileDebugRenderscript" type="com.android.build.gradle.tasks.RenderscriptCompile">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="generateReleaseBuildConfig" type="com.android.build.gradle.tasks.GenerateBuildConfig">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="ideaModule" type="org.gradle.plugins.ide.idea.GenerateIdeaModule">Generates IDEA module files (IML)&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
+            <task name="transformClassesWithDesugarForRelease" type="com.android.build.gradle.internal.pipeline.TransformTask">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="cleanIdea">Cleans IDEA project files (IML, IPR)&lt;p&gt;&lt;i&gt;Task group: IDE&lt;i&gt;</task>
             <task name="generateReleaseResources">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="lintVitalRelease" type="com.android.build.gradle.tasks.Lint">Runs lint on just the fatal issues in the release build.&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
@@ -345,6 +350,7 @@
             <task name="clean" type="org.gradle.api.tasks.Delete">Deletes the build directory.&lt;p&gt;&lt;i&gt;Task group: build&lt;i&gt;</task>
             <task name="preDebugBuild" type="com.android.build.gradle.internal.tasks.AppPreBuildTask">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="generateDebugBuildConfig" type="com.android.build.gradle.tasks.GenerateBuildConfig">&lt;i&gt;Task group: other&lt;i&gt;</task>
+            <task name="transformClassesWithDesugarForDebug" type="com.android.build.gradle.internal.pipeline.TransformTask">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="build">Assembles and tests this project.&lt;p&gt;&lt;i&gt;Task group: build&lt;i&gt;</task>
             <task name="assembleRelease">Assembles all Release builds.&lt;p&gt;&lt;i&gt;Task group: build&lt;i&gt;</task>
             <task name="resolveConfigAttr" type="com.android.build.gradle.internal.TaskManager$ConfigAttrTask">&lt;i&gt;Task group: other&lt;i&gt;</task>

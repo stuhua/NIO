@@ -4,6 +4,7 @@ import org.apache.tools.ant.Project;
 import org.apache.tools.ant.taskdefs.Zip;
 import org.apache.tools.ant.types.FileSet;
 
+
 import java.io.*;
 import java.nio.channels.FileChannel;
 import java.text.DateFormat;
@@ -11,15 +12,11 @@ import java.text.MessageFormat;
 import java.util.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
+
 /**
  * Created by liulh on 2017/5/26 17:27 星期五
  */
 
-
-/**
- * 文件操作工具类
- * Created by zyb on 16/1/8.
- */
 public class FileUtil {
     /**
      * 创建目录
@@ -332,6 +329,24 @@ public class FileUtil {
             bReturn = false;
         }
         return bReturn;
+    }
+
+    public boolean deleteDirectory(String path) {
+        SimpleFileVisitor<Path> finder = new SimpleFileVisitor<Path>() {
+            @Override
+            public FileVisitResult preVisitDirectory(Path dir,
+                                                     BasicFileAttributes attrs) throws IOException {
+                return FileVisitResult.CONTINUE;
+            }
+
+            @Override
+            public FileVisitResult visitFile(Path file,
+                                             BasicFileAttributes attrs) throws IOException {
+                files.add(file.toFile());
+                return super.visitFile(file, attrs);
+            }
+        };
+        return false;
     }
 
     /**
