@@ -14,7 +14,7 @@ import java.nio.channels.FileChannel;
 public class RWTest {
     public void read() {
         try {
-            RandomAccessFile aFile = new RandomAccessFile("", "rw");
+            RandomAccessFile aFile = new RandomAccessFile("f:\\test.txt", "rw");
             FileChannel inChannel = aFile.getChannel();
 
             ByteBuffer buffer = ByteBuffer.allocate(48);

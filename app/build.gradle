@@ -32,4 +32,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile group: 'org.apache.ant', name: 'ant', version: '1.8.2'
+    compile 'com.zhy:base-adapter:3.0.3'
 }
