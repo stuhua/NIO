@@ -1,5 +1,7 @@
 package github.stuhua.nio.utils;
 
+import android.content.Intent;
+
 import org.apache.tools.ant.Project;
 import org.apache.tools.ant.taskdefs.Zip;
 import org.apache.tools.ant.types.FileSet;
